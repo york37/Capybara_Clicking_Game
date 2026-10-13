@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3e8">
+  <title>Capybara Clicking Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><a class="brand" href="./index.html"><span>✿</span> capy club</a><span class="header-note">a little click. a lot of cozy.</span><button id="sound" class="sound-button" aria-pressed="true" aria-label="Turn sound off">♫ <span>Sound on</span></button></header>
+  <section class="total-coins-panel" aria-label="Coin wallet">
+    <span class="total-coins-label">✿ COIN WALLET</span>
+    <strong id="total-coins">0</strong>
+    <span class="total-coins-caption">Every boop counts!</span>
+  </section>
+  <main>
+    <aside class="progress-card" aria-label="Click progress">
+      <div class="eyebrow">YOUR LITTLE JOURNEY</div>
+      <h2>Growing together<span>One click at a time.</span></h2>
+      <div class="level"><span class="level-icon">✿</span><div><small>CURRENT LEVEL</small><strong id="level-name">Meadow friend</strong></div><span id="level">01</span></div>
+      <div class="meter-row"><div class="meter" role="progressbar" aria-label="Lifetime coins toward next level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="fill"></div><div class="meter-lines"></div></div><div class="meter-labels"><span id="target-label">100 coins</span><strong id="earned-coins">0<span>coins</span></strong><span>0 coins</span></div></div>
+      <p class="next-note"><span>↗</span> <span>Next level at <b id="target">100</b> coins<br>Lifetime earnings keep your level growing.</span></p>
+      <button id="reset" class="reset-button" type="button"><span aria-hidden="true">↺</span> Reset game</button>
+    </aside>
+    <section class="play-area">
+      <div class="intro"><div class="pill"><span></span> NO RUSH. JUST GOOD VIBES.</div><h1>Capybara<br><em>Clicking Game</em></h1><p>A tiny moment of happy, one boop at a time.</p></div>
+      <div class="scene">
+        <span class="scene-spark spark-one">✧</span><span class="scene-spark spark-two">✧</span><span class="scene-spark spark-three">✦</span>
+        <div class="speech" id="speech">hi, new friend! <span>♡</span></div>
+        <button class="capy-button" id="capy" aria-label="Boop the capybara to earn coins">
+          <span class="capy-stage"><img src="assets/capybara-cozy.png" alt="Cute seated capybara with empty paws" draggable="false"><svg id="outfit" viewBox="0 0 1254 1254" aria-hidden="true"></svg></span>
+        </button>
+        <div id="particles" aria-hidden="true"></div>
+      </div>
+      <div class="click-hint"><span>☝</span> click to boop <span>♡</span></div><div class="reward-note"><span id="click-reward">+1 coin</span> · +1 happy capybara</div>
+      <div class="cozy-note"><span>♡</span><p>Small clicks. Big feelings.<br><strong>You're doing great, friend.</strong></p></div>
+    </section>
+    <aside class="shop-card" aria-label="Upgrade shop">
+      <div class="eyebrow">A LITTLE EXTRA MAGIC</div>
+      <h2>Capy shop<span>Turn your boops into more coins.</span></h2>
+      <div class="click-power"><span>COINS PER CLICK</span><strong id="click-power">1</strong></div>
+      <div id="upgrades"></div>
+      <p class="shop-note">Spend wallet coins on upgrades. Your lifetime earnings and level stay with you.</p>
+    </aside>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <section class="wardrobe" aria-labelledby="wardrobe-title">
+    <div class="wardrobe-heading"><div><div class="eyebrow">DRESS UP YOUR LITTLE FRIEND</div><h2 id="wardrobe-title">Capy wardrobe<span>One random surprise unlocks at every level-up.</span></h2></div><span id="wardrobe-count">0 / 10 unlocked</span></div>
+    <div id="wardrobe-items" class="wardrobe-items"></div>
+    <p id="wardrobe-empty" class="wardrobe-empty">Your wardrobe is waiting! Level up to reveal your first surprise.</p>
+    <p class="wardrobe-note">Wear one decoration at a time. Click another to swap, or click the one you're wearing to take it off.</p>
+  </section>
+  <footer><span>Made for your happy place.</span><span>Take a breath. Give a boop. <span class="footer-flower">✿</span></span></footer>
+  <script src="game.js"></script>
+</body>
+</html>
+
+
+
